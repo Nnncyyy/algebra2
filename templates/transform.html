@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <title>Transformar Imagen</title>
+</head>
+<body>
+    <h1>Transformar Imagen</h1>
+    <div class="image-container">
+        <div class="image">
+            <h3>Imagen Original</h3>
+            <img src="{{ url_for('static', filename='images/' + original_filename) }}" alt="Original Image">
+        </div>
+        <div class="image">
+            <h3>Imagen Modificada</h3>
+            <img src="{{ url_for('static', filename='images/' + transformed_filename) }}" alt="Transformed Image">
+        </div>
+    </div>
+
+    
+    <form action="" method="post">
+        <h3>Rotar</h3>
+        <label for="angle">Ángulo:</label>
+        <input type="number" name="angle" step="1" value="0">
+        <button type="submit" name="transformation" value="rotate">Aplicar rotación</button>
+    </form>
+
+    <form action="" method="post">
+        <h3>Escalar</h3>
+        <label for="factor">Factor de escala:</label>
+        <!--aceptarán valores con dos decimales si el decimal final es 1.-->
+        <input type="number" name="factor" step="0.1">
+        <button type="submit" name="transformation" value="scale">Aplicar escalado</button>
+    </form>
+
+    <form action="" method="post">
+        <h3>Reflejar</h3>
+        <label for="axis">Eje:</label>
+        <select name="axis">
+            <option value="horizontal">Horizontal</option>
+            <option value="vertical">Vertical</option>
+        </select>
+        <button type="submit" name="transformation" value="reflect">Aplicar reflexión</button>
+    </form>
+
+    <form action="" method="post">
+        <h3>Trasladar</h3>
+        <label for="dx">Desplazamiento en X:</label>
+        <input type="number" name="dx" step="1" value="0">
+        <label for="dy">Desplazamiento en Y:</label>
+        <input type="number" name="dy" step="1" value="0">
+        <button type="submit" name="transformation" value="translate">Aplicar traslación</button>
+    </form>
+    <a href="/">Volver al inicio</a>
+</body>
+</html>
