@@ -13,6 +13,7 @@ Flujo del Sistema
 
 Lenguaje utilizado: Python, y para la interfaz: html; agregando estilo (css)
 El programa usa las librerias flask, numpy, os y PIL, por loq ue deben ser instladas para ejecutar el programa. Recuerda tener el paquete y la configuracion (path) de python ya instalado en tu computadora, para que la consola pueda importar las librerias y la ejecución salga exitosa.
+
 Utilizamos el entorno de editor de texto Visual Studio. Directamente puedes ejecutar el proyecto con la opción: Start Debugging.
 
 EL proyecto esta compuesto en una carpeta con sucarpetas:
